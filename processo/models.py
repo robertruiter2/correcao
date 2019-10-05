@@ -7,7 +7,7 @@ class Pessoa(models.Model):
     pesssoa = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.pesssoa
+        return self.pesssoa.first_name
 
 class Funcionario(Pessoa):
     matricula = models.CharField(max_length=15)
